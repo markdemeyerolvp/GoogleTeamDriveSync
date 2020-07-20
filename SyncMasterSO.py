@@ -390,8 +390,8 @@ class folderpair:
         self.sourcefoldertree = self.sourcetd.GetFolderTreeContent(self.topfolderidsource)
         self.destfoldertree = self.desttd.GetFolderTreeContent(self.topfolderiddest)
 
-    def ListMaster(self):
-        print('in listmaster')
+    def ListMain(self):
+        print('in listmain')
         self.sourcetd.PrintItemList()
 
 
@@ -592,18 +592,18 @@ def main():
     logger.error('starting log: This is an error')
 
     # === Read teamdrive properties and items
-    TdMasterSO = TeamDrive('MASTER-SO')
-    # TdMasterSO = TeamDrive('ICT-TECH')
+    TdMainSO = TeamDrive('MASTER-SO')
+    # TdMainSO = TeamDrive('ICT-TECH')
     TdLeraarsSO = TeamDrive('LERAARS-SO')
     # TdLlnbSO = teamdrive('LLNB-SO')
 
-    TdMasterSO.PrintItemList()
+    TdMainSO.PrintItemList()
 
     synclog=actionlog()
     #in mapje001
-    synclog.add_copyfile(TdMasterSO,'1H3keOI-FkPpTumpSP7ZJPI0rzD2EeAFsWlZxTHVVx64',TdLeraarsSO)
+    synclog.add_copyfile(TdMainSO,'1H3keOI-FkPpTumpSP7ZJPI0rzD2EeAFsWlZxTHVVx64',TdLeraarsSO)
     #in rootfolder
-    synclog.add_copyfile(TdMasterSO,'1QX03Iaxj5X0f6SFFl8JSFJ5TzsaFENufF9OmpBNqfFM',TdLeraarsSO)
+    synclog.add_copyfile(TdMainSO,'1QX03Iaxj5X0f6SFFl8JSFJ5TzsaFENufF9OmpBNqfFM',TdLeraarsSO)
 
     synclog.add_deletefile(TdLeraarsSO,'1QX03Iaxj5X0f6SFFl8JSFJ5TzsaFENufF9OmpBNqfFM')
     synclog.add_makedir(TdLeraarsSO, ['002 MAPJE21', '002.1', '002.1.1'])
@@ -615,36 +615,36 @@ def main():
 
     # print('Show folders')
 
-    # TdMasterSO.PrintItemList()
-    # lijst=TdMasterSO.getfoldercontent('0AJ1PGzg7eU1fUk9PVA','folder')
+    # TdMainSO.PrintItemList()
+    # lijst=TdMainSO.getfoldercontent('0AJ1PGzg7eU1fUk9PVA','folder')
     # print(lijst)
 
     # print('subtreelist:')
-    #TdMasterSO.GetFolderTreeContent('0AKw5HUdL5Qa_Uk9PVA', 'all')
+    #TdMainSO.GetFolderTreeContent('0AKw5HUdL5Qa_Uk9PVA', 'all')
 
-    # print(TdMasterSO.GetParentNameTreeById('1eCUXs9T_4mzipISx05GHuZbqE6Cxbq04'))
-    # print(TdMasterSO.GetParentTreeById('1E0kjqVGgn--Ofj1LFTTpO5t2myPGPoJebYFqytu0oTw'))
+    # print(TdMainSO.GetParentNameTreeById('1eCUXs9T_4mzipISx05GHuZbqE6Cxbq04'))
+    # print(TdMainSO.GetParentTreeById('1E0kjqVGgn--Ofj1LFTTpO5t2myPGPoJebYFqytu0oTw'))
 
     # TdLeraarsSO.deletefolder('10h1buFcMWmgChg4VO_Z3LvtTm06ZQ2gC') #in root
     # TdLeraarsSO.deletefolder('1bpGXQbsRgtpYUQqGFTshJ33S3lbkIoV3') #in 001 MAPJE1
     # 1ZpcamARWtMg0puYZ-oWQiIjn_lirifEs3xAYCz6Q4rY
 
     # google
-    # TdMasterSO.uploadfile('naam',TdLeraarsSO.id)
+    # TdMainSO.uploadfile('naam',TdLeraarsSO.id)
 
-    #TdMasterSO.copyfile('1ZpcamARWtMg0puYZ-oWQiIjn_lirifEs3xAYCz6Q4rY', TdLeraarsSO.id)
-    # TdMasterSO.copyfile('1ZpcamARWtMg0puYZ-oWQiIjn_lirifEs3xAYCz6Q4rY','1JSFcwRpA5H9idb0tMHl_fFXiQpVMSfhT')
+    #TdMainSO.copyfile('1ZpcamARWtMg0puYZ-oWQiIjn_lirifEs3xAYCz6Q4rY', TdLeraarsSO.id)
+    # TdMainSO.copyfile('1ZpcamARWtMg0puYZ-oWQiIjn_lirifEs3xAYCz6Q4rY','1JSFcwRpA5H9idb0tMHl_fFXiQpVMSfhT')
 
     # pdf
-    #TdMasterSO.copyfile('1qxmddPda7PQALL_fDdzygZlpww-xoepI',TdLeraarsSO.id)
-    #TdMasterSO.copyfile('1B_8xgo3YhylXskNBILOR-PQq-XOAhUQJ','1JSFcwRpA5H9idb0tMHl_fFXiQpVMSfhT')
+    #TdMainSO.copyfile('1qxmddPda7PQALL_fDdzygZlpww-xoepI',TdLeraarsSO.id)
+    #TdMainSO.copyfile('1B_8xgo3YhylXskNBILOR-PQq-XOAhUQJ','1JSFcwRpA5H9idb0tMHl_fFXiQpVMSfhT')
 
-    #TdMasterSO.createfolderwithparents(['005 MAPJE5', '005.1', '005.1.1'])
-    #TdMasterSO.deletefolderwithparents(['005 MAPJE5', '005.1', '005.1.1'])
+    #TdMainSO.createfolderwithparents(['005 MAPJE5', '005.1', '005.1.1'])
+    #TdMainSO.deletefolderwithparents(['005 MAPJE5', '005.1', '005.1.1'])
 
-    #TdMasterSO.deletefolderwithchilderen(['004 MAPJE4'])
+    #TdMainSO.deletefolderwithchilderen(['004 MAPJE4'])
 
-    #pair1 = folderpair('003 MAPJE3', TdMasterSO, TdLeraarsSO)
+    #pair1 = folderpair('003 MAPJE3', TdMainSO, TdLeraarsSO)
     #pair1.syncfolders()
 
 
@@ -755,7 +755,7 @@ SYNC bestanden in folderpaur en submappen
     dan per map : query bestanden op ParentID van sourcemap en sync de bestanden
         - controleer 'last modified'/'creationTime' v/e bestand in souce/dest -> indien gelijk: negeer
         - is lastmodified van source recenter dan dest -> update
-        - Eventueel : wat als als modified dest recenter is dan source???? -> copy met timestamp naar master?
+        - Eventueel : wat als als modified dest recenter is dan source???? -> copy met timestamp naar main?
 
 
 =============================================================================================
@@ -777,7 +777,7 @@ Logging : functie om acties en resultaten te loggen
 1. lijst met map-paren inlezen in array Arr-FolderPairs (tekstbestand op server)?
     - begin lijst met TeamDrives die ingelezen moeten worden. Hierop gebaseerd inlezen Arrays in stap 2
 
-2. lijst MASTER-SO & lijst ANDERE-SO opvragen en in array bewaren : Vb: ArrMasterSO, ArrLeerkrachtSO, ...
+2. lijst MASTER-SO & lijst ANDERE-SO opvragen en in array bewaren : Vb: ArrMainSO, ArrLeerkrachtSO, ...
 -> opvangen grote lijsten ...
 
 
@@ -795,14 +795,14 @@ Logging : functie om acties en resultaten te loggen
     bouw tijdens chroniseren een Array op met uit te voeren acties, bewaar deze acties in een tekstbestand voor latere;
 
     - controleer op nieuwe en bestaande en up te daten  items :
-        controleer elk item in ArrMaster :
+        controleer elk item in ArrMain :
             -  bestaat in MASTER en SLAVE
                 - lastmodified gelijk : niets doen
-                - lastmodified in MASTER recenter dan in SLAVE : actie update (= verwijder bestand in slave en copy niewe versie)
-            -  bestaat in MASTER en niet in SLAVE : actie : copy van master naar slave
+                - lastmodified in MASTER recenter dan in SLAVE : actie update (= verwijder bestand in subordinate en copy niewe versie)
+            -  bestaat in MASTER en niet in SLAVE : actie : copy van main naar subordinate
     - controleer op verwijderde items
-        - controleer elk item in ArrSlave
-            - bestaat item niet in Master : verwijder in slave
+        - controleer elk item in ArrSubordinate
+            - bestaat item niet in Main : verwijder in subordinate
 
 
 5. Wijzigingen doorvoeren
@@ -815,7 +815,7 @@ Logging : functie om acties en resultaten te loggen
 
 #==== VOORBEELDCODE
 
-   # master-so='0AKw5HUdL5Qa_Uk9PVA'
+   # main-so='0AKw5HUdL5Qa_Uk9PVA'
    #ict-tech='0AJ1PGzg7eU1fUk9PVA'
 
     results = drive_service.files().list(
@@ -833,16 +833,16 @@ Logging : functie om acties en resultaten te loggen
        fields="files(id, name, parents, mimeType)").execute()
        #fields = "nextPageToken, files(id, name, parents)").execute()
 
-    ArrFoldersMasterSO= results.get('files', [])
+    ArrFoldersMainSO= results.get('files', [])
 
-    if not ArrFoldersMasterSO:
+    if not ArrFoldersMainSO:
        print('No files found.')
     else:
        i=0
-       print('Files in master_so:')
-       #print (ArrFoldersMasterSO)
+       print('Files in main_so:')
+       #print (ArrFoldersMainSO)
 
-       for folder in ArrFoldersMasterSO:
+       for folder in ArrFoldersMainSO:
           #print(folder['parents'])
 
           if '0AJ1PGzg7eU1fUk9PVA' in folder['id']:
